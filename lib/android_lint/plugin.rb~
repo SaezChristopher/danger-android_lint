@@ -104,7 +104,7 @@ module Danger
         system "./gradlew #{gradle_task}"
       end
 
-       system "ls"
+      ls = `ls`
       fail "contenu #{ls}"
 
       unless File.exists?(report_file)
